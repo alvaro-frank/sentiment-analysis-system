@@ -1,0 +1,6 @@
+[submodule "sentiment-analysis-training"]
+	path = sentiment-analysis-training
+	url = https://github.com/alvaro-frank/sentiment-analysis.git
+[submodule "sentiment-analysis-backend"]
+	path = sentiment-analysis-backend
+	url = https://github.com/alvaro-frank/sentiment-analysis-backend.git
