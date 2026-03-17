@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  sentiment-api:
+    build:
+      context: ./sentiment-analysis-backend
+      dockerfile: Dockerfile
+    container_name: sentiment-backend-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+      - MODEL_PATH=models/sentiment_analysis_model
+    restart: always
+
+  mlflow-server:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: sentiment-mlflow-tracker
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./sentiment-analysis-training/mlruns:/app/mlruns
+    command: mlflow ui --host 0.0.0.0 --port 5000
