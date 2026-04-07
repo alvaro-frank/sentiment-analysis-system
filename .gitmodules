@@ -7,3 +7,6 @@
 [submodule "sentiment_analysis"]
 	path = sentiment_analysis
 	url = https://github.com/alvaro-frank/sentiment_analysis.git
+[submodule "sentiment-analysis-frontend"]
+	path = sentiment-analysis-frontend
+	url = https://github.com/alvaro-frank/sentiment-analysis-frontend.git
