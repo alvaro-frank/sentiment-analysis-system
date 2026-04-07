@@ -9,7 +9,7 @@ This project is organized into specialized repositories, linked here as **Git Su
 |-----------|-------------|------------|------------|
 | **AI Training** | Data generation via distillation, Bi-LSTM training, and experiment tracking. | Python, TensorFlow, MLflow, DVC | [Explore](https://github.com/alvaro-frank/sentiment_analysis) |
 | **Backend API** | High-performance inference service using Clean Architecture. | FastAPI, MLflow, Pytest | [Explore](https://github.com/alvaro-frank/sentiment-analysis-backend) |
-| **Frontend UI** | *[Planned]* Interactive visualization dashboard. | React, Three.js, TS | [TBD] |
+| **Frontend UI** | Modern, responsive interface for real-time text analysis visualization. | React, TypeScript, Vite | [Explore](https://github.com/alvaro-frank/sentiment-analysis-frontend) |
 
 ## 🛠️ Key Features
 - **Knowledge Distillation**: Uses a "Teacher-Student" strategy to transfer sentiment logic from FinBERT to a faster Bi-LSTM.
@@ -17,6 +17,7 @@ This project is organized into specialized repositories, linked here as **Git Su
 - **Production-Ready Inference**: Models are served using MLflow PyFunc wrappers, encapsulating preprocessing and model weights into a single portable artifact.
 - **Automated Quality**: Integrated CI/CD pipelines for automated unit/integration testing and Docker image builds.
 - **Financial Preprocessing**: Custom NLP pipeline that normalizes numbers and preserves critical negations (e.g., "not", "no") often lost in standard cleaning.
+- **Modern UI**: A fast, interactive React frontend smoothly integrated with the inference engine.
 
 ## ⚡ Quick Start
 
@@ -33,8 +34,9 @@ cd sentiment-analysis-system
 docker-compose up --build
 ```
 
-3. **Access API Documentation**:
+3. **Access the Application**:
 
-Visit `http://localhost:8000/docs` to test the endpoints.
+- **Frontend UI**: Visit `http://localhost:8080` to use the interactive application.
+- **Backend API Docs**: Visit `http://localhost:8000/docs` to test the FastAPI endpoints via Swagger.
 
 Developed by Álvaro Franco - [LinkedIn](https://www.linkedin.com/in/alvaro-jose-franco/) | [GitHub](https://github.com/alvaro-frank)
