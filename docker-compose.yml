@@ -13,6 +13,16 @@ services:
       - MODEL_PATH=models/sentiment_analysis_model
     restart: always
 
+  frontend:
+    build:
+      context: ./sentiment-analysis-frontend
+    container_name: sentiment_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
   mlflow-server:
     image: ghcr.io/mlflow/mlflow:latest
     container_name: sentiment-mlflow-tracker
